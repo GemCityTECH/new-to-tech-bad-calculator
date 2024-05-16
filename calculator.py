@@ -10,28 +10,35 @@ num1 = int(input('Please choose your first number: '))
 sign = input('What do you want to do? +, -, /, or *: ')
 num2 = int(input('Please choose your second number: '))
 
-def addNums(num1, num2):
-    print(f"{num1} + {num2} = {num1 + num2}")
-
-def subNums(num1, num2):
-    print(f"{num1} - {num2} = {num1 - num2}")
-
-def division_multi(num1,sign,num2):
-    if sign == "/":
-        print(f"{num1} {sign} {num2} = {num1 / num2}")
-    elif sign == "*":
-       print(f"{num1} {sign} {num2} = {num1 * num2}")
-    else:
-        print("This operation did not include * or /")
-
-def display(num1, num2, sign, answer):
+def display(num1, sign, num2, answer):
     print(f"{num1} {sign} {num2} = {answer}")
 
-if (sign == '+'):
-    answer = addNums(num1, num2)
-elif (sign == '-'):
-    answer = subNums(num1, num2)
+def add_numbers(num1, num2):
+    return num1 + num2
 
-division_multi(num1,sign,num2)
+def subtract_numbers(num1, num2):
+    return num1 - num2
+
+def multiply_numbers(num1, num2):
+    return num1 * num2
+
+def divide_numbers(num1, num2):
+    return num1 / num2
+
+def select_operation(num1, sign, num2):
+    match sign:
+        case "/":
+            return divide_numbers(num1, num2)
+        case "*":
+            return multiply_numbers(num1, num2)
+        case "+":
+            return add_numbers(num1, num2)
+        case "-":
+            return subtract_numbers(num1, num2)
+        case _:
+            print(f"Operatore not recognized: {sign}")
+
+answer = select_operation(num1, sign, num2)
+display(num1, sign, num2, answer)
 
 print("Thanks for using this calculator, goodbye :)")
