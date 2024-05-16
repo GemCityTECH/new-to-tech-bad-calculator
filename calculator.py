@@ -12,11 +12,11 @@ num2 = int(input('Please choose your second number: '))
 
 def division_multi(num1,sign,num2):
     if sign == "/":
-        print(num1," ",sign," ", num2,"=", (num1 / num2))
+        print(f"{num1} {sign} {num2} = {num1 / num2}")
     elif sign == "*":
-        print(num1," ",sign," ", num2,"=", (num1 * num2))
+       print(f"{num1} {sign} {num2} = {num1 * num2}")
     else:
-        "This operation did not include * or /"
+        print("This operation did not include * or /")
 
 
 if num1 == 0 and sign == '+' and num2 == 0:
@@ -10423,5 +10423,7 @@ if num1 == 50 and sign == '-' and num2 == 49:
     print("50-49 = 1")
 if num1 == 50 and sign == '-' and num2 == 50:
     print("50-50 = 0")
+
+division_multi(num1,sign,num2)
 
 print("Thanks for using this calculator, goodbye :)")
