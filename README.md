@@ -1,4 +1,4 @@
-# New To Tech Sorting
+# New To Tech Refactoring
 
 A downselect of [python-code-disasters](https://github.com/sobolevn/python-code-disasters) to support a New To Tech session on refactoring and code review for [Gem City Tech](https://gemcity.tech/).
 
@@ -14,7 +14,7 @@ You must have Python installed.
 python calculator.py
 ```
 
-# Tasks
+## Tasks
 
 - Extract the addition, subtraction, multiplication, and division functionality to their own function(s)
 - Deduplicate the codebase
