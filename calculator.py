@@ -11,18 +11,10 @@ sign = input('What do you want to do? +, -, /, or *: ')
 num2 = int(input('Please choose your second number: '))
 
 
-def addNums(num1, num2):
-    print(f"{num1} + {num2} = {num1 + num2}")
-
-def subNums(num1, num2):
-    print(f"{num1} - {num2} = {num1 - num2}")
-
 if (sign == "+"):
-    addNums(num1, num2)
+    display(num1, num2, sign, addNums(num1, num2))
 elif (sign == "-"):
-    subNums(num1, num2)
-else:
-    print("Unknown Operator")
+    display(num1, num2, sign, subNums(num1, num2))
 
 if num1 == 0 and sign == '/' and num2 == 0:
     print("0/0 = Undefined")
