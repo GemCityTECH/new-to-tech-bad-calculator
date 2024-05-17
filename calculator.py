@@ -36,9 +36,10 @@ def select_operation(num1, sign, num2):
         case "-":
             return subtract_numbers(num1, num2)
         case _:
-            print(f"Operatore not recognized: {sign}")
+            print(f"Operator not recognized: {sign}")
 
 answer = select_operation(num1, sign, num2)
-display(num1, sign, num2, answer)
+if answer:
+    display(num1, sign, num2, answer)
 
 print("Thanks for using this calculator, goodbye :)")
